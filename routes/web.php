@@ -6,3 +6,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/user',[UserController::class,'index']);
+Route::post('insert',[UserController::class,'insert'])->name('insert');
+Route::get('users',[UserController::class,'get']);

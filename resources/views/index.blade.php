@@ -7,7 +7,8 @@
 </head>
 <body>
 
-    <form action="" method="POST">
+    <form action="{{route('insert')}}" method="POST">
+        @csrf
         <label for="username">اسم المستخدم:</label>
         <input type="text" id="username" name="username" required>
 
