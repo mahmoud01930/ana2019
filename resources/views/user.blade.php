@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Users Table</title>
@@ -38,6 +39,7 @@
                 <th>ID</th>
                 <th>Username</th>
                 <th>Email</th>
+                <th>pro</th>
             </tr>
         </thead>
 
@@ -47,6 +49,10 @@
             <td>{{$user->id}}</td>
                 <td>{{$user->name}}</td>
                 <td>{{$user->email}}</td>
+                <td>
+                    <a class="btn btn-primary" href="{{route('edit',$user->id)}}" role="button">EDIT</a>
+                    <a class="btn btn-danger" href="#" role="button">DELET</a>
+                </td>
             </tr>
             @endforeach
         </tbody>

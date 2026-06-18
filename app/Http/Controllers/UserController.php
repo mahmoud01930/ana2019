@@ -27,5 +27,9 @@ class UserController extends Controller
         $users = DB::table('user')->get();
         return view('user',compact('users')) ;
     } 
-
+     
+    public function edit($id){
+       $edit = DB::table('user')->where('id',$id)->first(); 
+       return $edit ;
+    }
 } ;
